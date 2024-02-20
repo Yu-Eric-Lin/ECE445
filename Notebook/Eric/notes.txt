@@ -4,10 +4,30 @@ Eric Lin Worklog:
 
 
 
-** 2/6/2024: First meeting with TA ********
+** 2/6/2024: Second meeting with TA ********
 
-contents....
-
+we have dicussed what needs to improve for our proposal with TA:
+"""
+title page
+change the high level requirement to be the body detection
+“only after”
+nicer looking block diagram - font size larger
+small subsystems can be combined
+display - brush time, alarm time, current time
+overview - 3 parts
+    description of the subsystem
+    list out components in rows
+    interactions with other subsystems
+we don’t need to include the specification of the components
+    it’s in design documents, cost analysis 
+tolerance
+    include other potential failures
+    include math functions
+    refer to their data sheets
+ethics and safety
+    how can we address them during our development, design
+    reference to IEEE smth
+"""
 
 
 **************************************************************************************************************
@@ -17,6 +37,18 @@ contents....
 
 contents....
 
+
+
+**************************************************************************************************************
+
+
+** 2/20: summary of contents ********
+
+- Discussed what we need to have for next week, which is the design document presentation. It's good to have
+powerpoint presentation.
+- After design review, we need to modify it based off the suggestion given during the design review.
+- regrade for project proposal is this friday. 
+- self introduction, project introduction, just like the design document
 
 
 **************************************************************************************************************
