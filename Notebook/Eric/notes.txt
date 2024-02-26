@@ -28,7 +28,9 @@ ethics and safety
     how can we address them during our development, design
     reference to IEEE smth
 """
-
+these are the advices that TA have gave us base off the project proposal we have submitted earlier.
+we also discussed the logicstic of the course, how to ordering part, what's coming up next for the next few
+weeks.
 
 **************************************************************************************************************
 
@@ -42,7 +44,7 @@ contents....
 **************************************************************************************************************
 
 
-** 2/20: summary of contents ********
+** 2/20: Third meeting with TA ********
 
 - Discussed what we need to have for next week, which is the design document presentation. It's good to have
 powerpoint presentation.
@@ -50,5 +52,33 @@ powerpoint presentation.
 - regrade for project proposal is this friday. 
 - self introduction, project introduction, just like the design document
 
+
+**************************************************************************************************************
+
+
+
+** 2/25: Group meeting for design document presentation ********
+
+All three of us met at the Grainger Libaray for the upcoming presentation for the design document we submitted
+earlier. We want to make sure that everyone within the group is on the same page and know what's going on. We 
+have discussed multiple things in the document design we have submitted earlier to see if there's anything 
+needs to be change or updates. I have made the powerpoint slides before heading to the meeting. After 
+discussing the things need to be update, we assigned each of the slide to each members according to their 
+experties, we make sure every members gets equal amount of time in the presentation. And our goal after 
+meeting is to complete their designated slides, and practice it (make sure we can finished within 20 minutes 
+time frame). 
+
+
+**************************************************************************************************************
+
+
+
+** 2/26/2024: Design Document Presentation ********
+
+We just finished our presentation for design document, it went pretty smoothly. here is some of the advices
+that TA and professor gave: it's better to have more visual aids for the topics such as software and hardware
+design, need to include the tolerence in the high level requirements (when demo, it's required), where is
+the sensor placed, for teh voltage in the block diagram, how do we check if the voltage is 5 volts or 3.3
+volts..."
 
 **************************************************************************************************************
