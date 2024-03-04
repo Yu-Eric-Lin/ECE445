@@ -1,6 +1,33 @@
 Eric Lin Worklog:
-- 2/6/2024: First meeting with TA 
 
+** Dates: summary of contents ********
+
+contents....
+
+
+
+**************************************************************************************************************
+** 2/6/2024: First meeting with TA ********
+
+This is our first meeting with our assigned TA, MA. We have talked a lot for
+multiple different topics. First we decided the weekly meeting time for upcoming 
+meetings. Then each one of us have signed our the sheet for locker equipments.
+Later is more project-focused discussions, such as our block diagram, high level
+requirements, and multiple subsystems we had so far. We also go over how to manage
+the lab notebook for this course. We also discussed our future schedule.
+we also discussed the logicstic of the course, how to ordering part, what's coming up next for the next few weeks.
+
+Here is our locker info:
+"""
+The locker assigned to you is J5:
+
+Kit number: 95
+
+Lock Number: 91Y43
+
+Combo: 22-02-42
+"""
+**************************************************************************************************************
 
 
 
@@ -29,17 +56,6 @@ ethics and safety
     reference to IEEE smth
 """
 these are the advices that TA have gave us base off the project proposal we have submitted earlier.
-we also discussed the logicstic of the course, how to ordering part, what's coming up next for the next few
-weeks.
-
-**************************************************************************************************************
-
-
-** Dates: summary of contents ********
-
-contents....
-
-
 
 **************************************************************************************************************
 
@@ -80,5 +96,13 @@ that TA and professor gave: it's better to have more visual aids for the topics 
 design, need to include the tolerence in the high level requirements (when demo, it's required), where is
 the sensor placed, for teh voltage in the block diagram, how do we check if the voltage is 5 volts or 3.3
 volts..."
+
+**************************************************************************************************************
+
+** 03/04: work on the CAD design ********
+
+Today Laurenz and I spent multiple hours on creating the CAD design for our project, we used the KiCAD to do 
+so. We spent multiple hours on researching each components' datasheet, then we start connecting each 
+components together on the software KiCAD. 
 
 **************************************************************************************************************
