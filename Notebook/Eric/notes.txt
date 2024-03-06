@@ -106,3 +106,23 @@ so. We spent multiple hours on researching each components' datasheet, then we s
 components together on the software KiCAD. 
 
 **************************************************************************************************************
+
+** 3/5/2024: TA meeting ********
+- it's better to order it this week, not limited to one verson of file, if we have different idea, we can submit
+multiple file. (it will take week to arrived)
+advices that TA gave for design doc and design review:
+"""
+- visual aid is too simple, such as the sensor flowing around, it's better to include the user and it's signal.
+- Block diagram need to be more detail, for eacch inputs and outputs.
+- for each subsystems description, it's better to describe the materials used in for it.
+- "on for too long" in the alarm description need to be detail number.
+- on verification part, list out the steps / expect output that user need to do, not how system is responding.
+- in physical part, it's better to list the dimension, for software, need to include pesudocode to describe
+- no problem with tolerence analysis.
+- too few citations. include all of the datasheet is fine as well. 
+- chance to regarde.
+"""
+
+**************************************************************************************************************
+
+
