@@ -126,3 +126,23 @@ advices that TA gave for design doc and design review:
 **************************************************************************************************************
 
 
+** 03/25: work on the pcb board design ********
+
+contents....
+
+
+
+**************************************************************************************************************
+
+
+** 03/26: meeting with TA ********
+- Check if the item have arrived yet.
+- Check the software portion with TA jason, through email check if we can meet or state problems in it.
+- Not so many time left for us. (first version may not be perfect).
+- It's better to work on the software part now while waiting for the hardward to arrived.
+- Let the TA know the hardware part.
+- always ask TA for help.
+- For IPR, no strict on format, don't be too detail on it, present all things we have done so far and idea.
+- atleast what sensor, what alarm, very detail type, etc... to TA.
+
+**************************************************************************************************************
