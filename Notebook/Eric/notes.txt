@@ -127,9 +127,9 @@ advices that TA gave for design doc and design review:
 
 
 ** 03/25: work on the pcb board design ********
-
-contents....
-
+All three of us meet and discuss how each of the components are interconnect with each other, we make sure that
+everyone participated and know what's going on. we got most of main components wired up of KiCad, but still have 
+some remaining, Laurenz said that he's going to finished up later tonight or tomorrow.
 
 
 **************************************************************************************************************
@@ -148,14 +148,32 @@ contents....
 **************************************************************************************************************
 
 
+** 04/02: meeting with TA ********
+we have spoke with both of TA and Jason regarding our design, and what we need to be done in order to accomplish,
+and here are the advices that TA Ma and Jason gave:
+"""
+- Discuss the programming part of our design. Set the dock as the master, and the toothbrush and alarm as the 
+slave, just like the 
+- ESP32 would be great, not only for the communication between devices, but also can serve as the microcontroller
+for our project. This could make our life much easier compare to soely rely on the pic microcontroller, which
+only can be program through their aseembly language.
+"""
+
 **************************************************************************************************************
 
+** 04/06: working on the project ********
+we got the materials that day, and we try to solder the things on the pcb. But later we found out that the 
+esp32 microcontroller was way too small, and all of the pins were cover in the button (don't have those chip pins),
+so we thought about moving into the development board instead. Carl and I also working on the software part
+(code), so when the development arrived, we can just program it without waiting.
 
-** 04/02: meeting with TA ********
-advices that TA Ma and Jason gave:
+**************************************************************************************************************
+
+** 04/09: meeting with TA ********
+
+advices that TA Ma gave:
 """
-- Discuss the programming part of our design.
-- ESP32 would be great,
+- 
 - 
 """
 
