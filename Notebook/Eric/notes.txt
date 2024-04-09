@@ -169,12 +169,14 @@ so we thought about moving into the development board instead. Carl and I also w
 
 **************************************************************************************************************
 
-** 04/09: meeting with TA ********
+** 04/09: last weekly meeting with TA ********
 
 advices that TA Ma gave:
 """
-- 
-- 
+- focus on getting things down, at least have something done, on the development, not so much on the pcb.
+- it's better to order things this week, 
+- always keep TA update
+- be prepare for the mock demo
 """
 
 **************************************************************************************************************
