@@ -127,12 +127,13 @@ advices that TA gave for design doc and design review:
 
 
 ** 03/25: work on the pcb board design ********
+
 All three of us meet and discuss how each of the components are interconnect with each other, we make sure that
 everyone participated and know what's going on. we got most of main components wired up of KiCad, but still have 
 some remaining, Laurenz said that he's going to finished up later tonight or tomorrow.
 
-
 **************************************************************************************************************
+
 
 
 ** 03/26: meeting with TA ********
@@ -148,7 +149,43 @@ some remaining, Laurenz said that he's going to finished up later tonight or tom
 **************************************************************************************************************
 
 
+** 03/27: changed devices and research ********
+
+We have decided that to changed the transceiver from using the LIN protocol to using the bluetooth protocol.
+We believe that the LIN is much more complicated in terms sending the recieving or exhange messages between
+each other. Bluetooth in other hand, is much easier to implement by using the esp32 (the one we found online
+and have a lot of guide on how to program it). Also, we found out that if the distance between each system is 
+not far away from each other, there will be no problem about it, and this is more suitable for our system,
+since all three components need to be in same location by what we proposed in the design doc. After careful
+considering the tradeoff, we have decided to switch to ESP32 instead of LIN transceiver. 
+
+**************************************************************************************************************
+
+** 03/29: Individual work on the program pic microcontroller********
+
+I have made some research perviously regarding how to program the PIC16f886, but I haven't found much about it.
+Since the pic will arrive this week, and I want to test it before connecting with the transreciever.
+
+Our pic microcontroller (pic16f886) need to be program it through the mplab IDE, the one I found it's required 
+in order to program it. since this is very old and out-dated type of controller, there weren't that many guide
+of using it, we tested some of the example code given in the documentation:
+'''
+banksel PORTA    ;
+clrf    PORTA    ; init porta
+banksel ANSEL    ;
+clrf    ANSEL    ; disital I/O
+banksel TRISA    ;
+movlw   0ch      ; set RA<3:2> as inputs
+movwf   TRISA    ; and set RA<5:4, 1:0> as outputs
+'''
+I have tested with the led, but this doesn't work, so I save this with question when I talk with Jason on next
+monday.
+
+**************************************************************************************************************
+
+
 ** 04/02: meeting with TA ********
+
 we have spoke with both of TA and Jason regarding our design, and what we need to be done in order to accomplish,
 and here are the advices that TA Ma and Jason gave:
 """
@@ -162,10 +199,34 @@ only can be program through their aseembly language.
 **************************************************************************************************************
 
 ** 04/06: working on the project ********
+
 we got the materials that day, and we try to solder the things on the pcb. But later we found out that the 
 esp32 microcontroller was way too small, and all of the pins were cover in the button (don't have those chip pins),
 so we thought about moving into the development board instead. Carl and I also working on the software part
-(code), so when the development arrived, we can just program it without waiting.
+(code), so when the development board arrived, we can just program it without waiting.
+
+**************************************************************************************************************
+
+
+** 04/07: research on the wireless communication ********
+
+since we have decided to first tested our functionalities on the development board first. The first step, I 
+need to check whether or not these development board are able to communicate with each other or not. I have
+made some research online regarding how to transfer package of data by using the esp32, and the one I have 
+found is by using the esp-now library in Arduino. In order to use it, it requires the mac address of the 
+reciever in order to send data. And I found out that we can use the wifi library to find the mac address of 
+the board itself. I wrote some code of both and just need to waite for the development board to arrive to 
+test it.
+
+**************************************************************************************************************
+
+** 04/07: test on the wireless communication ********
+
+We got our supplies. I have the code from yesterday, and told carl about my finding and code I wrote. 
+Since both of us are responsible for the software portion of this project, we use each of own devices and tried
+to make our esp32 to send each other a number, and tested whether or not is functioning correctly. we do have 
+some error in the begining, but the overll direction is correct, and in the end, we are able to make the 
+esp32 communicate with each other.
 
 **************************************************************************************************************
 
@@ -181,7 +242,71 @@ advices that TA Ma gave:
 
 **************************************************************************************************************
 
-** 04/016: Mock demo with TA ********
+
+** 04/10: test alarm ********
+
+We got our supplies. I have the code from yesterday, and told carl about my finding and code I wrote. 
+Since both of us are responsible for the software portion of this project, we use each of own devices and tried
+to make our esp32 to send each other a number, and tested whether or not is functioning correctly. we do have 
+some error in the begining, but the overll direction is correct, and in the end, we are able to make the 
+esp32 communicate with each other.
+
+**************************************************************************************************************
+
+
+** 04/11: test sensor on the dock ********
+
+We got our supplies. I have the code from yesterday, and told carl about my finding and code I wrote. 
+Since both of us are responsible for the software portion of this project, we use each of own devices and tried
+to make our esp32 to send each other a number, and tested whether or not is functioning correctly. we do have 
+some error in the begining, but the overll direction is correct, and in the end, we are able to make the 
+esp32 communicate with each other.
+
+**************************************************************************************************************
+
+** 04/11: test clock/7-segment display ********
+
+We got our supplies. I have the code from yesterday, and told carl about my finding and code I wrote. 
+Since both of us are responsible for the software portion of this project, we use each of own devices and tried
+to make our esp32 to send each other a number, and tested whether or not is functioning correctly. we do have 
+some error in the begining, but the overll direction is correct, and in the end, we are able to make the 
+esp32 communicate with each other.
+
+**************************************************************************************************************
+
+
+** 04/12: test rtc ********
+
+We got our supplies. I have the code from yesterday, and told carl about my finding and code I wrote. 
+Since both of us are responsible for the software portion of this project, we use each of own devices and tried
+to make our esp32 to send each other a number, and tested whether or not is functioning correctly. we do have 
+some error in the begining, but the overll direction is correct, and in the end, we are able to make the 
+esp32 communicate with each other.
+
+**************************************************************************************************************
+
+** 04/14: test accelorometer ********
+
+We got our supplies. I have the code from yesterday, and told carl about my finding and code I wrote. 
+Since both of us are responsible for the software portion of this project, we use each of own devices and tried
+to make our esp32 to send each other a number, and tested whether or not is functioning correctly. we do have 
+some error in the begining, but the overll direction is correct, and in the end, we are able to make the 
+esp32 communicate with each other.
+
+**************************************************************************************************************
+
+
+** 04/15: combine all of working materials together ********
+
+We got our supplies. I have the code from yesterday, and told carl about my finding and code I wrote. 
+Since both of us are responsible for the software portion of this project, we use each of own devices and tried
+to make our esp32 to send each other a number, and tested whether or not is functioning correctly. we do have 
+some error in the begining, but the overll direction is correct, and in the end, we are able to make the 
+esp32 communicate with each other.
+
+**************************************************************************************************************
+
+** 04/16: Mock demo with TA ********
 
 we spoke with TA with our current progress, we also demonstrated what we currently had, which is three seperate
 devices, and its a peer to peer connection, the alarm will continue to ring until the user finally pick up the
