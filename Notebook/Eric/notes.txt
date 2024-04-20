@@ -180,3 +180,29 @@ advices that TA Ma gave:
 """
 
 **************************************************************************************************************
+
+** 04/016: Mock demo with TA ********
+
+we spoke with TA with our current progress, we also demonstrated what we currently had, which is three seperate
+devices, and its a peer to peer connection, the alarm will continue to ring until the user finally pick up the
+toothbrush and sends the data back to the dock, and the dock will start the timer and sends signal to let the 
+alarm stop ringing. But if the user stop the activities halfway through the process, the alarm will continue to
+ring until the user is finally done with the brushing activities. 
+
+Here is the advices that TA gave:
+"""
+- try to get the pcb working
+- try to finish all of the components like the subsystems and all that stuff.
+- be prepare for the final demo (if you haven't sign up yet, do that as soon as possible)
+- here is somehting we need to prepare for the final demo:
+    + print out the copies of our schematics
+    + have a presentation
+    + make sure to introduce youself
+    + what is the purpose of your device, what is the background and so on
+    + explain what each of the components do
+    + what challanges we faced
+    + what changes you made
+    + be prepare for the questions that we might face (technical quesetions), like software and hardware portion
+"""
+
+**************************************************************************************************************
