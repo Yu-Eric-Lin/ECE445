@@ -305,6 +305,12 @@ motions effect the acceleration and rotation in x,y,z directions. After collecti
 an formula that is calculated based off the x, y, z rotation, and once that value reach the threshold we set,
 it will start sending signal to let the dock know that user is currently using the toothbrush. 
 
+equation: 
+'''
+absolute(xRotation + 0.05) >= b_thresh or absolute(yRotation - 0.05) >= b_thresh or absolute(zRotation - 0.01) >= b_thresh
+and the b_thresh = 0.5
+'''
+
 **************************************************************************************************************
 
 
