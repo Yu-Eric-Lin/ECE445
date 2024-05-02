@@ -377,6 +377,31 @@ the same steps I did yesterday (for second mode), and it work perfectly.
 
 ** 04/22: test buttons ********
 
+We got our buttons for today, so we are able to test our programs that required buttons to work. But we encountered
+deboucing issue caused by the buttons, and these buttons also causing the clock to flash so much quicker, whcih is 
+not great. Everytime we pressed the buttons, and we have a variable to track with that on our program, due to deboucing
+issue, one pressed of buttons can be 3,4,5, or 6 pressed on the program. Carl and I first using hardware way to 
+mitigate debounce by using the resister and capacitor, we tried all of the versions, but still unable to mitigate
+the debouncing issue. Then Carl and I decided to use software way to mitigate debounce by including extra states, 
+initially set as false, once the button is being pressed, changed the state to true, if there is no pressing and the 
+state is true, change the state to false. This allow us to mitigate the debounce that is caused by the button, so
+all we need is to connect one of the button pin with high, so everytime the button is pressed, only detect once
+rather than mulitiple times.
 
+**************************************************************************************************************
+
+
+** 04/23: test whole system and pcb ********
+
+Once we got our button integrated to the dock, we are able to test the entire system at once. We include all of 
+motion sensor to our dock. Now only both conditions (sensor detects user and user is using toothbrush) are met in
+order to turn off the alarm, if only one condition met, the alarm will keep ringing. We went through all of the 
+requirement and verification we set earlier, as well as the funcitonality check, except for the battery subsystem
+from Laurenz Nava is incomplete (but we can still replace it with actual battery), all other functionalities work 
+as expected. We also film a short video of working product and waiting for Laurenz to get his pcb solder. However,
+Laurenz didn't have all of the PCBs solder on time, only the spearker pcb was partially soldered, Carl and I still
+test it to see whether it work or not. unfortunately, the speaker pcb he soldered is incorrect, the whole thing
+was shorted. luckly, the two pin (from the chip) for what we use for that still able to work, so we cut the
+pcb apart and take the chip and assemble on breadboard again.
 
 **************************************************************************************************************
