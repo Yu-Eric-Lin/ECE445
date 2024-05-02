@@ -31,7 +31,7 @@ Combo: 22-02-42
 
 
 
-** 2/6/2024: Second meeting with TA ********
+** 2/13/2024: Second meeting with TA ********
 
 we have dicussed what needs to improve for our proposal with TA:
 """
@@ -107,7 +107,7 @@ components together on the software KiCAD.
 
 **************************************************************************************************************
 
-** 3/5/2024: TA meeting ********
+** 3/5/2024: meeting with TA ********
 - it's better to order it this week, not limited to one verson of file, if we have different idea, we can submit
 multiple file. (it will take week to arrived)
 advices that TA gave for design doc and design review:
@@ -137,6 +137,7 @@ some remaining, Laurenz said that he's going to finished up later tonight or tom
 
 
 ** 03/26: meeting with TA ********
+
 - Check if the item have arrived yet.
 - Check the software portion with TA jason, through email check if we can meet or state problems in it.
 - Not so many time left for us. (first version may not be perfect).
@@ -192,7 +193,7 @@ and here are the advices that TA Ma and Jason gave:
 - Discuss the programming part of our design. Set the dock as the master, and the toothbrush and alarm as the 
 slave, just like the 
 - ESP32 would be great, not only for the communication between devices, but also can serve as the microcontroller
-for our project. This could make our life much easier compare to soely rely on the pic microcontroller, which
+for our project. This could make our life much easier compare to just rely on the pic microcontroller, which
 only can be program through their aseembly language.
 """
 
@@ -220,13 +221,17 @@ test it.
 
 **************************************************************************************************************
 
-** 04/07: test on the wireless communication ********
+** 04/08: test on the wireless communication ********
 
 We got our supplies. I have the code from yesterday, and told carl about my finding and code I wrote. 
 Since both of us are responsible for the software portion of this project, we use each of own devices and tried
 to make our esp32 to send each other a number, and tested whether or not is functioning correctly. we do have 
-some error in the begining, but the overll direction is correct, and in the end, we are able to make the 
+some error in the begining, but the overll direction is correct. In the end, we are able to make the 
 esp32 communicate with each other.
+
+the second part of our plan today is to implement pressure sensor for the toothbrush subsystem, but the chip
+we got don't have those pins, so we won't be able to test it on the breadboard. Because of that, we decided to 
+switch to mu6050 for this portion of our design.
 
 **************************************************************************************************************
 
@@ -245,64 +250,72 @@ advices that TA Ma gave:
 
 ** 04/10: test alarm ********
 
-We got our supplies. I have the code from yesterday, and told carl about my finding and code I wrote. 
-Since both of us are responsible for the software portion of this project, we use each of own devices and tried
-to make our esp32 to send each other a number, and tested whether or not is functioning correctly. we do have 
-some error in the begining, but the overll direction is correct, and in the end, we are able to make the 
-esp32 communicate with each other.
+We got our alarm today. Carl and I first try to design how to integrate alarm with our esp32 while recieving 
+data from the dock. I have decided that once the dock recieve the data from the dock, 1 for on and 0 for off, 
+the alarm should be able to respond base of that data. since the speaker we got is the one that required to be
+solder in pcb in order to test it, carl have decided to solder the wire with speaker first, then test it on
+the breadboard to ensure our program is working as intended. One challange we have encountered that day is 
+regarding the volume of our speaker, is very low when we have one pin set high and another set as low. Because
+base off the datasheet, this is what is should be. later we also tested by set both pin into high through our
+program, it getting better, but still not loud enough. Lastly, we have tested one pin set high by our program,
+and the other pin connect with the 5.5 volts output, and we found out that this method outputs the highest 
+volume, around 60 dB, for our speaker, and we decided to go with that.
 
 **************************************************************************************************************
 
 
 ** 04/11: test sensor on the dock ********
 
-We got our supplies. I have the code from yesterday, and told carl about my finding and code I wrote. 
-Since both of us are responsible for the software portion of this project, we use each of own devices and tried
-to make our esp32 to send each other a number, and tested whether or not is functioning correctly. we do have 
-some error in the begining, but the overll direction is correct, and in the end, we are able to make the 
-esp32 communicate with each other.
+carl and I decided to implement the motion sensor today since the accelerometer haven't arrive yet. The design
+of motion sensor went pretty smoothly, we got them to worl as expected in our first try. But the performance
+is inconsistent, sometime the user can be detect within 3 meter range, but sometime only can be detect within
+1 meter range. But later, when we include more motion sensor instead of just using one motion sensor, we got 
+more consistent performance.
 
 **************************************************************************************************************
 
-** 04/11: test clock/7-segment display ********
+** 04/12: test clock/7-segment display ********
 
-We got our supplies. I have the code from yesterday, and told carl about my finding and code I wrote. 
-Since both of us are responsible for the software portion of this project, we use each of own devices and tried
-to make our esp32 to send each other a number, and tested whether or not is functioning correctly. we do have 
-some error in the begining, but the overll direction is correct, and in the end, we are able to make the 
-esp32 communicate with each other.
+Today, carl and I work on the time display for our clock subsystem. This is the longest we have work on it so
+far. We have a lot issue on reading the datasheet and make it work on our breadboard. All of the pins we use
+according to the datasheet is wrong. So we have to test pin by pin to know which is which. we also experiencing
+some difficulties in what the delay should be, because the clock is been flashing way too fast for the value
+we set. After testing multiple rounds, the best delay we got that fits the requirement is 5 milliseconds. This
+delay allow us to switch to other mode, with least amount of flashing. 
 
 **************************************************************************************************************
 
 
-** 04/12: test rtc ********
+** 04/13: test rtc ********
 
-We got our supplies. I have the code from yesterday, and told carl about my finding and code I wrote. 
-Since both of us are responsible for the software portion of this project, we use each of own devices and tried
-to make our esp32 to send each other a number, and tested whether or not is functioning correctly. we do have 
-some error in the begining, but the overll direction is correct, and in the end, we are able to make the 
-esp32 communicate with each other.
+Our plan is to work on the rtc with clock display, but the clock is much longer than expected. The rtc is not 
+as difficult as the clock, but we did spent chunk of time on it. We have some trouble calculating the time with
+the current hour and minute function from the esp32rtc library. Later we found out that there's epoch funciton
+that we can use to help us to achieve our goal. We also decided to show minute and second for the default mode,
+this allow us to see what's going on on the background rather than just static numbers (hour and minutes). 
 
 **************************************************************************************************************
 
 ** 04/14: test accelorometer ********
 
-We got our supplies. I have the code from yesterday, and told carl about my finding and code I wrote. 
-Since both of us are responsible for the software portion of this project, we use each of own devices and tried
-to make our esp32 to send each other a number, and tested whether or not is functioning correctly. we do have 
-some error in the begining, but the overll direction is correct, and in the end, we are able to make the 
-esp32 communicate with each other.
+We got our accelerometer today. Carl and I try to see how to integrate this with our esp32. After we connect
+our esp32 with the accelerometer, we try to see the acceleration in the x, y, and z direction, as well as the
+rotation in 3d direction as well. We also tested many motions applied to our toothbrush, and see how these 
+motions effect the acceleration and rotation in x,y,z directions. After collecting these statistics, we have
+an formula that is calculated based off the x, y, z rotation, and once that value reach the threshold we set,
+it will start sending signal to let the dock know that user is currently using the toothbrush. 
 
 **************************************************************************************************************
 
 
 ** 04/15: combine all of working materials together ********
 
-We got our supplies. I have the code from yesterday, and told carl about my finding and code I wrote. 
-Since both of us are responsible for the software portion of this project, we use each of own devices and tried
-to make our esp32 to send each other a number, and tested whether or not is functioning correctly. we do have 
-some error in the begining, but the overll direction is correct, and in the end, we are able to make the 
-esp32 communicate with each other.
+Carl and I today try to integrate all three of the components together to see if is working as expected. First
+issue we have encounter is the delay issue. we realize the number of the delay from the clock subsystem have 
+significant impact on other two subssytems. Since the toothbrush and alarm have very little delay on their 
+system. Laster we add somewhat equal amount of delay to solve this issue. Other functions work as expected,
+but we don't have everything to work, as of now, we are only able to let the dock to turn on the alarm and 
+tested whether or not toothbrush can let the dock to turn off the alarm.
 
 **************************************************************************************************************
 
@@ -329,5 +342,41 @@ Here is the advices that TA gave:
     + what changes you made
     + be prepare for the questions that we might face (technical quesetions), like software and hardware portion
 """
+
+**************************************************************************************************************
+
+
+** 04/18: test second mode on the clock subsystem ********
+
+Today I work on the the second mode for our clock subsystem. The second mode allow us to change/reset the current 
+time as user desired, and it require us to have four buttons.
+Since we don't have them now (I was not able to find them in our toolbox), I only tested the funcitonalities
+with four wires. If the the wire connect to high that means we pressed the buttons. The problem that I have 
+encounter is also the delay issue whenever I start to switch between current time and reset current time, or
+reset current time while is count down from toothbrush. 
+what I have done, is to let the second mode run on another fucntion instead of using same fucntion as for the one
+that run the current time funciton. I did the same for countdown, and it work perfectly.
+
+**************************************************************************************************************
+
+
+** 04/19: test third mode on the clock subsystem ********
+
+Today I work on the the third mode for our clock subsystem. The third mode allow us to change/reset the alarm 
+time as user desired, and it also require us to have four buttons, just like the second mode. I designed 
+these two mode share the same buttons. The first button for changing the mode (1-3), while is in second or third mode,
+you can press the second button to change the hour (from 0-23), third button to change the minute (0-59), 
+and the last/forth button to change confirm the changes. If you don't press the forth mode, it won't reset
+the time.
+Since I still don't have the buttons, I only tested the funcitonalities with four wires. If the the wire connect to
+high that means we pressed the buttons. The problem that I have encounter is also the delay issue, so I just use
+the same steps I did yesterday (for second mode), and it work perfectly.
+
+**************************************************************************************************************
+
+
+** 04/22: test buttons ********
+
+
 
 **************************************************************************************************************
